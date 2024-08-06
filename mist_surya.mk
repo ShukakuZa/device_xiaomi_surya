@@ -12,24 +12,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/mist/config/common_full_phone.mk)
 
 
 # Maintainer
-ALPHA_BUILD_TYPE := Official
-ALPHA_MAINTAINER := lily985
+MIST_BUILD_TYPE := OFFICIAL
+MIST_MAINTAINER := TeamMist
 
 # Device config
 TARGET_ENABLE_BLUR := true
 TARGET_EXCLUDES_AUDIOFX := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_INCLUDE_PIXEL_LAUNCHER := false
+WITH_GAPPS := true
 
 # Build package
-TARGET_BUILD_PACKAGE := 3
+#TARGET_BUILD_PACKAGE := 3
 WITH_GMS := true
 
 # Pixel Launcher
-TARGET_LAUNCHER := 3
+#TARGET_LAUNCHER := 3
 
 # GAPPS
 TARGET_SUPPORTS_QUICK_TAP := true
@@ -41,7 +43,7 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := true
 # Debugging
 TARGET_INCLUDE_MATLOG := false
 
-PRODUCT_NAME := lineage_surya
+PRODUCT_NAME := mist_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Poco X3 NFC
